@@ -200,6 +200,19 @@
     .p6 .lesson-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
     .p6 .lesson-row span { aspect-ratio: 1.3; background: #fff; border-radius: 6px; border-top: 4px solid #4d5ca6; }
 
+    .insights { background: var(--deep); color: var(--deep-ink); }
+    .insights .section-index { color: #d4af37; }
+    .insights .section-head p { color: var(--deep-muted); }
+    .insights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .insight-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09); border-radius: 14px; padding: 28px; transition: transform .35s ease, border-color .35s ease; display: flex; flex-direction: column; }
+    .insight-card:hover { transform: translateY(-5px); border-color: rgba(212,175,55,.4); }
+    .insight-tag { font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #d4af37; margin-bottom: 14px; }
+    .insight-card h3 { margin: 0 0 12px; font-size: 1.15rem; line-height: 1.3; font-family: "Newsreader", serif; }
+    .insight-card p { color: var(--deep-muted); font-size: .88rem; line-height: 1.7; margin: 0 0 20px; flex: 1; }
+    .insight-link { color: var(--deep-ink); font-size: .85rem; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+    .insight-link:hover { color: #d4af37; }
+    .insight-date { font-size: .72rem; color: var(--deep-muted); margin-top: 16px; }
+
     .services { position: relative; }
     .service-list { border-top: 1px solid var(--line); }
     .service-item { display: grid; grid-template-columns: 70px 1fr auto; gap: 24px; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--line); }
@@ -435,7 +448,7 @@
       <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <div class="navlinks" id="navlinks">
-      <a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#packages">Packages</a>
+      <a href="#services">Services</a><a href="#work">Work</a><a href="#process">Process</a><a href="#packages">Packages</a><a href="#insights">Insights</a>
       <a class="nav-cta open-brief" href="#brief">Start a project</a>
     </div>
   </nav>
@@ -652,6 +665,25 @@
       <div class="shell contact-panel reveal">
         <div><div class="section-index">10 / Contact</div><h2>Start with a clear conversation.</h2><p>Tell us what you are presenting, who needs to see it and when it needs to be ready. We’ll reply with the right questions and a practical next step.</p></div>
         <div class="contact-details"><span class="contact-label">Email Pitchcraft</span><a class="contact-email" href="mailto:mohsinsrr@gmail.com">mohsinsrr@gmail.com</a><br><a class="button dark" href="mailto:mohsinsrr@gmail.com?subject=Pitchcraft%20project%20enquiry">Send a project enquiry</a></div>
+      </div>
+    </section>
+
+    <section class="insights" id="insights">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div><div class="section-index">11 / Insights</div><h2>Thinking that<br>wins rooms.</h2></div>
+          <p>Practical notes on presentation design, storytelling and persuasion — written from real client work, for founders and teams who present to win.</p>
+        </div>
+        <div class="insights-grid" id="insightsGrid">
+          <!-- DAILY POSTS: newest first. Cron inserts new cards at the top of this grid. -->
+          <article class="insight-card reveal">
+            <div class="insight-tag">Pitch Design</div>
+            <h3>The 3-Second Rule: Why Your First Slide Decides Everything</h3>
+            <p>Your audience judges your deck before you've said a word. Here's how to make your opening slide earn the next three minutes.</p>
+            <a class="insight-link" href="insights/three-second-rule-first-slide.html">Read article →</a>
+            <div class="insight-date">15 October 2026</div>
+          </article>
+        </div>
       </div>
     </section>
 
